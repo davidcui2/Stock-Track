@@ -113,10 +113,8 @@
 				2285641720BB5BF1007F5E7A /* MasterViewController.swift */,
 				2285641920BB5BF1007F5E7A /* DetailViewController.swift */,
 				2285641B20BB5BF1007F5E7A /* Main.storyboard */,
-				2285641E20BB5BF3007F5E7A /* Assets.xcassets */,
-				2285642020BB5BF3007F5E7A /* LaunchScreen.storyboard */,
-				2285642320BB5BF3007F5E7A /* Info.plist */,
 				2285644520BB6494007F5E7A /* Data Model */,
+				2285644F20BB729E007F5E7A /* Assets */,
 			);
 			path = "Stock Track";
 			sourceTree = "<group>";
@@ -149,6 +147,16 @@
 				2285644920BB64D8007F5E7A /* StockItem+CoreDataProperties.swift */,
 			);
 			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		2285644F20BB729E007F5E7A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2285641E20BB5BF3007F5E7A /* Assets.xcassets */,
+				2285642020BB5BF3007F5E7A /* LaunchScreen.storyboard */,
+				2285642320BB5BF3007F5E7A /* Info.plist */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
