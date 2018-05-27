@@ -16,6 +16,10 @@
 		2285642220BB5BF3007F5E7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2285642020BB5BF3007F5E7A /* LaunchScreen.storyboard */; };
 		2285642D20BB5BF4007F5E7A /* Stock_TrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285642C20BB5BF4007F5E7A /* Stock_TrackTests.swift */; };
 		2285643820BB5BF4007F5E7A /* Stock_TrackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285643720BB5BF4007F5E7A /* Stock_TrackUITests.swift */; };
+		2285644A20BB64D8007F5E7A /* StockHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285644620BB64D8007F5E7A /* StockHistory+CoreDataClass.swift */; };
+		2285644B20BB64D8007F5E7A /* StockHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285644720BB64D8007F5E7A /* StockHistory+CoreDataProperties.swift */; };
+		2285644C20BB64D8007F5E7A /* StockItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285644820BB64D8007F5E7A /* StockItem+CoreDataClass.swift */; };
+		2285644D20BB64D8007F5E7A /* StockItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285644920BB64D8007F5E7A /* StockItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		2285643320BB5BF4007F5E7A /* Stock TrackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stock TrackUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2285643720BB5BF4007F5E7A /* Stock_TrackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock_TrackUITests.swift; sourceTree = "<group>"; };
 		2285643920BB5BF4007F5E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2285644620BB64D8007F5E7A /* StockHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2285644720BB64D8007F5E7A /* StockHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2285644820BB64D8007F5E7A /* StockItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2285644920BB64D8007F5E7A /* StockItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +116,7 @@
 				2285641E20BB5BF3007F5E7A /* Assets.xcassets */,
 				2285642020BB5BF3007F5E7A /* LaunchScreen.storyboard */,
 				2285642320BB5BF3007F5E7A /* Info.plist */,
-				2285641420BB5BF1007F5E7A /* Stock_Track.xcdatamodeld */,
+				2285644520BB6494007F5E7A /* Data Model */,
 			);
 			path = "Stock Track";
 			sourceTree = "<group>";
@@ -129,6 +137,18 @@
 				2285643920BB5BF4007F5E7A /* Info.plist */,
 			);
 			path = "Stock TrackUITests";
+			sourceTree = "<group>";
+		};
+		2285644520BB6494007F5E7A /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				2285641420BB5BF1007F5E7A /* Stock_Track.xcdatamodeld */,
+				2285644620BB64D8007F5E7A /* StockHistory+CoreDataClass.swift */,
+				2285644720BB64D8007F5E7A /* StockHistory+CoreDataProperties.swift */,
+				2285644820BB64D8007F5E7A /* StockItem+CoreDataClass.swift */,
+				2285644920BB64D8007F5E7A /* StockItem+CoreDataProperties.swift */,
+			);
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2285644C20BB64D8007F5E7A /* StockItem+CoreDataClass.swift in Sources */,
 				2285641620BB5BF1007F5E7A /* Stock_Track.xcdatamodeld in Sources */,
 				2285641320BB5BF1007F5E7A /* AppDelegate.swift in Sources */,
 				2285641820BB5BF1007F5E7A /* MasterViewController.swift in Sources */,
 				2285641A20BB5BF1007F5E7A /* DetailViewController.swift in Sources */,
+				2285644A20BB64D8007F5E7A /* StockHistory+CoreDataClass.swift in Sources */,
+				2285644B20BB64D8007F5E7A /* StockHistory+CoreDataProperties.swift in Sources */,
+				2285644D20BB64D8007F5E7A /* StockItem+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

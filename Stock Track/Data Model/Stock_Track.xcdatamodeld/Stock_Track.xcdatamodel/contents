@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="StockHistory" representedClassName="StockHistory" syncable="YES">
+        <attribute name="amount" attributeType="Float" minValueString="0" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StockItem" inverseName="history" inverseEntity="StockItem" syncable="YES"/>
+    </entity>
+    <entity name="StockItem" representedClassName="StockItem">
+        <attribute name="amountLeft" attributeType="Float" minValueString="0" defaultValueString="11" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="consumptionDailyRate" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isDeseret" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="packageCount" attributeType="Float" minValueString="0" defaultValueString="100" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="timestamp" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <relationship name="history" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="StockHistory" inverseName="item" inverseEntity="StockHistory" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <elements>
+        <element name="StockItem" positionX="261" positionY="189" width="128" height="165"/>
+        <element name="StockHistory" positionX="261" positionY="189" width="128" height="90"/>
+    </elements>
+</model>
