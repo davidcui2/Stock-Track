@@ -10,16 +10,16 @@
         <attribute name="consumptionDailyRate" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isDeseret" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <attribute name="packageCount" attributeType="Float" minValueString="0" defaultValueString="100" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="timestamp" attributeType="Date">
             <userInfo/>
         </attribute>
+        <attribute name="totalPackageCount" attributeType="Float" minValueString="0" defaultValueString="100" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="history" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="StockHistory" inverseName="item" inverseEntity="StockHistory" syncable="YES"/>
         <userInfo/>
     </entity>
     <elements>
-        <element name="StockItem" positionX="261" positionY="189" width="128" height="165"/>
         <element name="StockHistory" positionX="261" positionY="189" width="128" height="90"/>
+        <element name="StockItem" positionX="261" positionY="189" width="128" height="165"/>
     </elements>
 </model>

@@ -20,6 +20,7 @@
 		2285644B20BB64D8007F5E7A /* StockHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285644720BB64D8007F5E7A /* StockHistory+CoreDataProperties.swift */; };
 		2285644C20BB64D8007F5E7A /* StockItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285644820BB64D8007F5E7A /* StockItem+CoreDataClass.swift */; };
 		2285644D20BB64D8007F5E7A /* StockItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285644920BB64D8007F5E7A /* StockItem+CoreDataProperties.swift */; };
+		2285645120BB76FB007F5E7A /* ItemMasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285645020BB76FB007F5E7A /* ItemMasterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		2285644720BB64D8007F5E7A /* StockHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2285644820BB64D8007F5E7A /* StockItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2285644920BB64D8007F5E7A /* StockItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2285645020BB76FB007F5E7A /* ItemMasterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMasterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				2285641220BB5BF1007F5E7A /* AppDelegate.swift */,
 				2285641720BB5BF1007F5E7A /* MasterViewController.swift */,
+				2285645020BB76FB007F5E7A /* ItemMasterCell.swift */,
 				2285641920BB5BF1007F5E7A /* DetailViewController.swift */,
 				2285641B20BB5BF1007F5E7A /* Main.storyboard */,
 				2285644520BB6494007F5E7A /* Data Model */,
@@ -296,6 +299,7 @@
 				2285641820BB5BF1007F5E7A /* MasterViewController.swift in Sources */,
 				2285641A20BB5BF1007F5E7A /* DetailViewController.swift in Sources */,
 				2285644A20BB64D8007F5E7A /* StockHistory+CoreDataClass.swift in Sources */,
+				2285645120BB76FB007F5E7A /* ItemMasterCell.swift in Sources */,
 				2285644B20BB64D8007F5E7A /* StockHistory+CoreDataProperties.swift in Sources */,
 				2285644D20BB64D8007F5E7A /* StockItem+CoreDataProperties.swift in Sources */,
 			);
@@ -472,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5QB7973RVT;
-				INFOPLIST_FILE = "Stock Track/Info.plist";
+				INFOPLIST_FILE = "Stock Track/Assets/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,7 +494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5QB7973RVT;
-				INFOPLIST_FILE = "Stock Track/Info.plist";
+				INFOPLIST_FILE = "Stock Track/Assets/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

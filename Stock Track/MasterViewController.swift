@@ -17,6 +17,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.leftBarButtonItem = editButtonItem
 
@@ -45,6 +48,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
              
         // If appropriate, configure the new managed object.
         newItem.timestamp = Date() as NSDate
+        
+        newItem.name = "My item"
+        newItem.setPhoto(uiImage: UIImage(named: "DefaultItemImage")!)
+        newItem.amountLeft = 10
+        newItem.totalPackageCount = 100
+        newItem.consumptionDailyRate = 1
+        newItem.isDeseret = true
 
         // Save the context.
         do {
@@ -83,9 +93,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let event = fetchedResultsController.object(at: indexPath)
-        configureCell(cell, withEvent: event)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemMasterCell", for: indexPath) as! ItemMasterCell
+        let item = fetchedResultsController.object(at: indexPath)
+        configureItemMasterCell(cell, withItem: item)
         return cell
     }
 
@@ -110,8 +120,19 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
     }
 
-    func configureCell(_ cell: UITableViewCell, withEvent event: StockItem) {
-        cell.textLabel!.text = event.timestamp!.description
+    func configureItemMasterCell(_ cell: ItemMasterCell, withItem item: StockItem) {
+        cell.nameLabel.text = item.name
+        cell.photoView.image = item.getPhoto()
+        cell.photoView.layer.cornerRadius = 5
+        cell.photoView.layer.borderWidth = 3
+        cell.photoView.layer.borderColor = UIColor.blue.cgColor
+
+        // TODO: Logic to handle isPercentage
+        let percentageLeft = item.amountLeft / item.totalPackageCount
+        cell.amountLabel.text = String(format: "%.2f%%", percentageLeft)
+        
+        let daysLeft = floor(item.amountLeft / item.consumptionDailyRate)
+        cell.timeLeftLabel.text = "⟲\(daysLeft)d"
     }
 
     // MARK: - Fetched results controller
@@ -172,9 +193,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             case .delete:
                 tableView.deleteRows(at: [indexPath!], with: .fade)
             case .update:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! StockItem)
+                configureItemMasterCell(tableView.cellForRow(at: indexPath!)! as! ItemMasterCell, withItem: anObject as! StockItem)
             case .move:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! StockItem)
+                configureItemMasterCell(tableView.cellForRow(at: indexPath!)! as! ItemMasterCell, withItem: anObject as! StockItem)
                 tableView.moveRow(at: indexPath!, to: newIndexPath!)
         }
     }

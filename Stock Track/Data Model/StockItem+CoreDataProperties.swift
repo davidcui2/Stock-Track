@@ -21,7 +21,7 @@ extension StockItem {
     @NSManaged public var name: String?
     @NSManaged public var photo: NSData?
     @NSManaged public var amountLeft: Float
-    @NSManaged public var packageCount: Float
+    @NSManaged public var totalPackageCount: Float
     @NSManaged public var isDeseret: Bool
     @NSManaged public var consumptionDailyRate: Float
     @NSManaged public var history: NSOrderedSet?
