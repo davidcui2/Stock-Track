@@ -10,7 +10,7 @@
 		2285641320BB5BF1007F5E7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285641220BB5BF1007F5E7A /* AppDelegate.swift */; };
 		2285641620BB5BF1007F5E7A /* Stock_Track.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2285641420BB5BF1007F5E7A /* Stock_Track.xcdatamodeld */; };
 		2285641820BB5BF1007F5E7A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285641720BB5BF1007F5E7A /* MasterViewController.swift */; };
-		2285641A20BB5BF1007F5E7A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285641920BB5BF1007F5E7A /* DetailViewController.swift */; };
+		2285641A20BB5BF1007F5E7A /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285641920BB5BF1007F5E7A /* ItemDetailViewController.swift */; };
 		2285641D20BB5BF1007F5E7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2285641B20BB5BF1007F5E7A /* Main.storyboard */; };
 		2285641F20BB5BF3007F5E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2285641E20BB5BF3007F5E7A /* Assets.xcassets */; };
 		2285642220BB5BF3007F5E7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2285642020BB5BF3007F5E7A /* LaunchScreen.storyboard */; };
@@ -45,7 +45,7 @@
 		2285641220BB5BF1007F5E7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2285641520BB5BF1007F5E7A /* Stock_Track.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stock_Track.xcdatamodel; sourceTree = "<group>"; };
 		2285641720BB5BF1007F5E7A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		2285641920BB5BF1007F5E7A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2285641920BB5BF1007F5E7A /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		2285641C20BB5BF1007F5E7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2285641E20BB5BF3007F5E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2285642120BB5BF3007F5E7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 				2285641220BB5BF1007F5E7A /* AppDelegate.swift */,
 				2285641720BB5BF1007F5E7A /* MasterViewController.swift */,
 				2285645020BB76FB007F5E7A /* ItemMasterCell.swift */,
-				2285641920BB5BF1007F5E7A /* DetailViewController.swift */,
+				2285641920BB5BF1007F5E7A /* ItemDetailViewController.swift */,
 				2285641B20BB5BF1007F5E7A /* Main.storyboard */,
 				2285644520BB6494007F5E7A /* Data Model */,
 				2285644F20BB729E007F5E7A /* Assets */,
@@ -297,7 +297,7 @@
 				2285641620BB5BF1007F5E7A /* Stock_Track.xcdatamodeld in Sources */,
 				2285641320BB5BF1007F5E7A /* AppDelegate.swift in Sources */,
 				2285641820BB5BF1007F5E7A /* MasterViewController.swift in Sources */,
-				2285641A20BB5BF1007F5E7A /* DetailViewController.swift in Sources */,
+				2285641A20BB5BF1007F5E7A /* ItemDetailViewController.swift in Sources */,
 				2285644A20BB64D8007F5E7A /* StockHistory+CoreDataClass.swift in Sources */,
 				2285645120BB76FB007F5E7A /* ItemMasterCell.swift in Sources */,
 				2285644B20BB64D8007F5E7A /* StockHistory+CoreDataProperties.swift in Sources */,

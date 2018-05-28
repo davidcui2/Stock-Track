@@ -11,7 +11,7 @@ import CoreData
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
-    var detailViewController: DetailViewController? = nil
+    var detailViewController: ItemDetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
 
@@ -21,13 +21,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         
         // Do any additional setup after loading the view, typically from a nib.
-        navigationItem.leftBarButtonItem = editButtonItem
+//        navigationItem.leftBarButtonItem = editButtonItem
+        let settingButton = UIBarButtonItem(title: "Setting", style: .plain, target: self, action: nil)
+        navigationItem.leftBarButtonItem = settingButton
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewItem(_:)))
         navigationItem.rightBarButtonItem = addButton
         if let split = splitViewController {
             let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? ItemDetailViewController
         }
     }
 
@@ -73,7 +75,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
             let object = fetchedResultsController.object(at: indexPath)
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+                let controller = (segue.destination as! UINavigationController).topViewController as! ItemDetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
@@ -132,7 +134,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         cell.amountLabel.text = String(format: "%.2f%%", percentageLeft)
         
         let daysLeft = floor(item.amountLeft / item.consumptionDailyRate)
-        cell.timeLeftLabel.text = "⟲\(daysLeft)d"
+        cell.timeLeftLabel.text = "\(daysLeft)d"
     }
 
     // MARK: - Fetched results controller
