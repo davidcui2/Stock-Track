@@ -16,6 +16,10 @@ extension StockHistory {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<StockHistory> {
         return NSFetchRequest<StockHistory>(entityName: "StockHistory")
     }
+    
+    @nonobjc public class func matchPredicate(withItem: StockItem) -> NSPredicate {
+        return NSPredicate(format: "ANY item == %@", withItem)
+    }
 
     @NSManaged public var timestamp: NSDate?
     @NSManaged public var amount: Float
